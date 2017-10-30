@@ -8,8 +8,9 @@ function renderName(name) {
 }
 
 function compare(arr) {
+  arr = country
   for (let i = 0; i < arr.length; i++) {
-    if ($term.value === arr[i].name) {
+    if ($term.value === arr[i].name.toLowerCase()) {
       renderName(arr[i].name)
     }
   }
@@ -17,15 +18,8 @@ function compare(arr) {
 
 $term.addEventListener('keyup', function() {
   console.log($term.value)
-
   list().then(documents => (country = documents))
-  // .then(documents => console.log(documents.length))
-  // .then(console.log(country))
-  // .then(documents => renderName(documents[i].name))
-  // .then(documents => (country = documents))
-
-  // for (let i = 0; i < list.length; i++) {
-  //   if () // compare $term.value with names on list
+  compare()
 })
 
 /* notes
