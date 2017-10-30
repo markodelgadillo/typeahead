@@ -1,7 +1,6 @@
 const { MongoClient } = require('mongodb')
 const express = require('express')
 const app = express()
-const seed = require('./seed.js')
 app.use(express.static('./public'))
 
 MongoClient.connect('mongodb://localhost/library', function(err, db) {
@@ -13,6 +12,7 @@ MongoClient.connect('mongodb://localhost/library', function(err, db) {
 
   app.get('/country', function(req, res) {
     console.log('Getting stuff...')
+    console.log(req)
     country
       .find({}, { _id: 0 })
       .toArray()

@@ -259,19 +259,3 @@ const seed = (module.exports = MongoClient.connect(
     db.close()
   }
 ))
-
-/* notes
-- database with array
-- string.prototype.indexOf()
-- id #term for search term
-- toLowerCase
-- charAt?
-- array.filter(word => {
-    if (word.indexOf('T')===0})
-
-- search function to mongodb
-- use delay search upon key press (debouncing)
-- begins search after two letters inputted
-- on key down event listener
--
-*/

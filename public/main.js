@@ -4,10 +4,11 @@ list().then(documents => (country = documents))
 let country = ''
 
 function renderNames(names) {
-  const $result = document.querySelector('#result')
+  const $result = document.querySelector('.result')
   $result.innerHTML = ''
   names.forEach(name => {
     const $div = document.createElement('div')
+    $div.setAttribute('class', 'list')
     $div.textContent = name
     $result.appendChild($div)
   })
@@ -29,16 +30,7 @@ function compare() {
     }
     renderNames(list)
   } else {
-    const $result = document.querySelector('#result')
+    const $result = document.querySelector('.result')
     $result.innerHTML = ''
   }
 }
-
-/*
-adjust input field with spacing around it separating the results and
-input field
-
-async fetch?
-
-
-*/
