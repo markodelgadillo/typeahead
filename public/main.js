@@ -1,5 +1,6 @@
 const $term = document.querySelector('#term')
 const list = () => fetch('/country').then(res => res.json())
+list().then(documents => (country = documents))
 let country = ''
 
 function renderName(name) {
@@ -7,20 +8,41 @@ function renderName(name) {
   $result.textContent = name
 }
 
-function compare(arr) {
+// function compare(arr) {
+//   arr = country
+//   for (let i = 0; i < arr.length; i++) {
+//     if ($term.value === arr[i].name.toLowerCase()) {
+//       renderName(arr[i].name)
+//     }
+//   }
+// }
+
+$term.addEventListener('keyup', function() {
+  console.log($term.value)
+  compareThree()
+})
+
+// test
+// function compareTwo(letters) {
+//   arr = country
+//   for (let i = 0; i < arr.length; i++) {
+//     let name = arr[i].name
+//     for (let j = 0; j < name.length; j++) {
+//       if ((letters = characters)) {
+//         renderName(name)
+//       }
+//     }
+//   }
+// }
+
+function compareThree(arr) {
   arr = country
   for (let i = 0; i < arr.length; i++) {
-    if ($term.value === arr[i].name.toLowerCase()) {
+    if (arr[i].name.toLowerCase().startsWith($term.value)) {
       renderName(arr[i].name)
     }
   }
 }
-
-$term.addEventListener('keyup', function() {
-  console.log($term.value)
-  list().then(documents => (country = documents))
-  compare()
-})
 
 /* notes
 - database with array
