@@ -26,4 +26,5 @@ The user can see their search word autocompleted with a possible search result.
 
 #Screen Capture
 
+![typeahead](https://user-images.githubusercontent.com/13569476/32235581-1569d398-be1d-11e7-899a-b879b47f6198.gif)
 
