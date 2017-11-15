@@ -1,0 +1,42 @@
+{
+  "name": "typeahead",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babelify": "^8.0.0",
+    "browserify": "^14.5.0",
+    "express": "^4.16.2",
+    "mongodb": "^2.2.33",
+    "nodemon": "^1.12.1",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "styled-components": "^2.2.3"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "watchify": "^3.9.0"
+  },
+  "scripts": {
+    "start": "npm index.js",
+    "watch": "nodemon index.js",
+    "bundle":
+      "browserify client/index.js -t babelify -o server/public/bundle.js",
+    "bundle:watch":
+      "watchify client/index.js -vd -t babelify -o server/public/bundle.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/markodelgadillo/typeahead.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/markodelgadillo/typeahead/issues"
+  },
+  "homepage": "https://github.com/markodelgadillo/typeahead#readme"
+}
